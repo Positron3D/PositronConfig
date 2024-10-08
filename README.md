@@ -4,16 +4,16 @@ This is stock configs for the Positron, but you need to double check things!
 # Things to Check
 ## Z_Endstop
 First, in `Printer.cfg`, check your `endstop_pin`;
-```python
-## Choose only one of the following lines for z homing ##
-# endstop_pin: probe:z_virtual_endstop  ; virtual endstop probe 
-endstop_pin: gpio3                      ; microswitch
+```properties
+[stepper_z]
+# endstop_pin: probe:z_virtual_endstop  ; IR probe
+endstop_pin: gpio3                      ; microswitch endstop
 ```
 By default, it is set to `gpio3` as we are moving to a microswitch configuration. If you have not installed a Z_Endstop, please comment this line out and uncomment `probe:z_virtual_endstop`;
-```python
-## Choose only one of the following lines for z homing ##
-endstop_pin: probe:z_virtual_endstop  ; virtual endstop probe 
-#endstop_pin: gpio3                      ; microswitch
+```properties
+[stepper_z]
+endstop_pin: probe:z_virtual_endstop  ; IR probe
+#endstop_pin: gpio3                      ; microswitch endstop
 ```
 This will re-enable the IR Sensor.
 
@@ -27,7 +27,7 @@ This will likely cause your printer to home Z too early, the higher the number i
 - Note; you may need to move the bed down a bit every time, as it is likely to move up each time you attempt this.
 
 Once you are happy with your X homing, and it isn't skipping when it reaches 0 on the X axis, take that value and go into `sensorless_homing_pv3.cfg` and set the following;
-```python
+```properties
 [tmc2209 stepper_x]
 diag_pin: ^gpio16
 driver_SGTHRS: -> UPDATE THIS VALUE <-
@@ -38,7 +38,7 @@ Repeat this process for the Y axis using;
 `SET_TMC_FIELD STEPPER=stepper_y FIELD=SGTHRS VALUE=60`
 
 and once again, find the correct value for your Y Axis, and update the following;
-```python
+```properties
 [tmc2209 stepper_y]
 diag_pin: ^gpio25
 driver_SGTHRS: -> UPDATE THIS VALUE <-
