@@ -26,7 +26,7 @@ In your klipper console, run;
 This will likely cause your printer to home Z too early, the higher the number in `VALUE` the higher the sensitivity of the sensorless homing. Re-run this command with a slightly lower value (we reccomend reducing by increments of 5), until your X axis is reliably homing.
 - Note; you may need to move the bed down a bit every time, as it is likely to move up each time you attempt this.
 
-Once you are happy with your X homing, and it isn't skipping when it reaches 0 on the X axis, take that value and go into `sensorless_homing_pv3.cfg` and set the following;
+Once you are happy with your X homing, and it isn't skipping when it reaches 0 on the X axis, take that value and go into `printer.cfg` and set the following;
 ```properties
 [tmc2209 stepper_x]
 diag_pin: ^gpio16
