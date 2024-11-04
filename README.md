@@ -10,6 +10,8 @@ Check out the [Positron Hardware Repository](https://github.com/Positron3D/Posit
 ---
 ## Installation
 
+First download the [latest release](https://github.com/Positron3D/PositronConfig/releases/latest) version of the config files from GitHub. You can also get development and beta versions as well
+
 ![GitHub Release](https://img.shields.io/github/v/release/Positron3D/PositronConfig?sort=semver&style=for-the-badge)
 
 To install or update to these configurations, simply put the `printer.cfg`, `positron_macros.cfg`, `moonraker.conf`, and `KlipperScreen.conf` files into the Klipper config folder. The easiest way to do this is with the configuration page in Fluidd.
