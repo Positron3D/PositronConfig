@@ -19,7 +19,7 @@ To install or update to these configurations, simply put the `printer.cfg`, `pos
 If you have any changes you'd like to keep, or the results of endstop calibration, PID tuning, or input shaper calibration, be sure to make a backup of those values before installing the new files.
 
 ## Things to check
-This is stock configs for the Positron, but there are some things to check if your printer isn't stock:
+These are the configs for the stock Positron, but there are some things to check if your printer isn't stock:
 
 
 ### Sensorless Homing Sensitivity
@@ -87,4 +87,4 @@ endstop_pin: probe:z_virtual_endstop    ; IR probe
 
 This will disable the endstop and use the IR (or other bed probe) for homing
 
-[^1]: The IR probe has proven unreliable, especially with glass beds. While it can be used for tramming or mesh compensation with a PCB bed, we still recommend homing with the endstop if possible.
+[^1]: The IR probe has generally proven unreliable with the glass beds. While it can be used for guided tramming or mesh compensation with a PCB bed, we still recommend homing with the endstop if possible.
